@@ -2,24 +2,36 @@ import java.util.Scanner;
 
 public class TestCar {
 	
+	//prints the details of cars that have km between 20000 and 40000
+	public static void printCarsDetailsIfOver(Car cars[]) {
+		for (int i=0; i<cars.length; i++) {
+			if (cars[i].getKm() > 20000 && cars[i].getKm() < 40000) {
+				System.out.println("Car's type: "+cars[i].getType());
+				System.out.println("Car's color: "+cars[i].getColor());
+				System.out.println("The car has: "+cars[i].getKm()+" km");
+			}
+		}
+	}
+	
 	//counts how many red cars there are
-	public static void redCars(Car cars[]) {
+	public static double redCars(Car cars[]) {
 		int redCounter = 0;
 		for (int i=0; i<cars.length; i++) {
 			if (cars[i].getColor() == "red") {
 				redCounter++;
 			}
 		}
+		return redCounter;
 	}
 	
 	//goes through all the cars and calculates the average km and returns it
-	public static double averageKm(Car cars[]) {
+	public static void averageKm(Car cars[]) {
 		double totalKm = 0;
 		for (int i=0; i<cars.length; i++) {
 			totalKm += cars[i].getKm() ;
 		}
 		double avg = totalKm/cars.length;
-		return "The average is: "+avg	;
+		System.out.println("The average is: "+avg);
 	}
 	
 	//finds the car with the least km and prints its information
@@ -35,7 +47,7 @@ public class TestCar {
 			}
 		}
 		System.out.println("The car with the least km has: "+min+" on it");
-		System.out.println("The car's color is: "+"carColor");
+		System.out.println("The car's color is: "+carColor);
 		System.out.println("The car's type is: "+carType);
 	}
 	
