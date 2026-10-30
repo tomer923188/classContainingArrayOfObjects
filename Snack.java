@@ -1,12 +1,12 @@
 
 public class Snack {
 	public String name;
-	public double weight;
+	public int weight;
 	public double price;
 	public int rank;
 
 //constructor
-public Snack (String name, double weight, double price, int rank) {
+public Snack (String name, int weight, double price, int rank) {
 	this.name = name;
 	this.weight = weight;
 	this.price = price;
@@ -29,7 +29,7 @@ public double getPrice() {
 }
 
 //returns the item's rank
-public int rank() {
+public int getRank() {
 	return rank;
 }
 
@@ -39,7 +39,7 @@ public void setName(String name) {
 }
 
 //sets a new weight for the item
-public void setWeight(double weight) {
+public void setWeight(int weight) {
 	this.weight = weight;
 }
 

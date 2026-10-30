@@ -26,7 +26,7 @@ public class TestSoldier {
 		Soldier [] soldiers = new Soldier[20];
 		double height = 0;
 		String name = "";
-		for (int i=0; i<20; i++) {
+		for (int i=0; i<soldiers.length; i++) {
 			System.out.print("Enter your name: " );
 			name = input.next();
 			System.out.print("Enter your height: " );
